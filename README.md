@@ -16,11 +16,13 @@
 2. Filter by the colors logic activated in todolist component
 3. Line through logic updated only for completed status in todo component
 
-# In this commit Adding Todo, Complete all todo & Clear all completed Todo
+# Adding Todo, Complete all todo & Clear all completed Todo
 1. Added the new todo adding feature in Header component
 2. Updated the button Complete All Tasks that will complete all our todo
 3. Updated the button Clear Completed Tasks that will remove all completed todo
 
+# In this commit adding a extra action to toggle all the completed 
+1. We added a new action InComplete that will toggle all task to complete false and added this in header component
 
 
 

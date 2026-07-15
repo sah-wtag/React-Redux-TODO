@@ -2,9 +2,15 @@ import noteImage from "../assets/images/notes.png";
 import tickImage from "../assets/images/double-tick.png";
 import plusImage from "../assets/images/plus.png";
 import crossImage from "../assets/images/cross.png";
+import unTickImage from "../assets/images/incomplete.png";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { added, allCompleted, clearCompleted } from "../redux/todos/actions";
+import {
+  added,
+  allCompleted,
+  allInCompleted,
+  clearCompleted,
+} from "../redux/todos/actions";
 
 export default function () {
   const [input, setInput] = useState("");
@@ -22,6 +28,10 @@ export default function () {
 
   const completeHandler = () => {
     dispatch(allCompleted());
+  };
+
+  const inCompleteHandler = () => {
+    dispatch(allInCompleted());
   };
 
   const clearteHandler = () => {
@@ -52,6 +62,14 @@ export default function () {
         <li className="flex space-x-1 cursor-pointer" onClick={completeHandler}>
           <img className="w-4 h-4" src={tickImage} alt="Complete" />
           <span>Complete All Tasks</span>
+        </li>
+
+        <li
+          className="flex space-x-1 cursor-pointer"
+          onClick={inCompleteHandler}
+        >
+          <img className="w-4 h-4" src={unTickImage} alt="Complete" />
+          <span>In-Complete All Tasks</span>
         </li>
 
         <li className="flex space-x-1 cursor-pointer" onClick={clearteHandler}>

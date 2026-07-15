@@ -2,6 +2,7 @@ import initialState from "./initialState";
 import {
   ADDED,
   ALLCOMPLETED,
+  ALLINCOMPLETED,
   CLEARCOMPLETED,
   COLORSELECTED,
   DELETED,
@@ -57,6 +58,14 @@ const reducer = (state = initialState, action) => {
         return {
           ...todo,
           completed: true,
+        };
+      });
+
+    case ALLINCOMPLETED:
+      return state.map((todo) => {
+        return {
+          ...todo,
+          completed: false,
         };
       });
 
