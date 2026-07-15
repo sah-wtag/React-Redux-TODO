@@ -1,16 +1,30 @@
-# React + Vite
+# Live link: https://sadman-todo.netlify.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# This is a todo project 
+## Intially
+1. We have introduced 2 main redux part here, Todos and Filter. We have added actions and reducers for them with initial state.
+2. We have setted up the redux store and provided the app component under this
+3. We have Todolist component which shows the Todo component with multiple workablity
+4. In Todo component we can Change Color(Red/Green/Yellow), Toggle status(Complete true/false), Delete the todo 
 
-Currently, two official plugins are available:
+## Footer
+1. Updated the Footer component
+2. Updated how many tasks left in footer dynamically with dynamic messages
+3. We have enbaled the All, Incomplete and Complete status buttons for filtering, we also enabled BOLD syntax for the chosed status
+4. In the footer, we have options to filter by 3 colors also, we have updated the footer component to select/unselect the colors and the colors shows when toggling/pressing (filtering is not implemented yet in Todolist component)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Filtering Todo List
+1. Filter by the status logic activated in todolist component
+2. Filter by the colors logic activated in todolist component
+3. Line through logic updated only for completed status in todo component
 
-## React Compiler
+# Adding Todo, Complete all todo & Clear all completed Todo
+1. Added the new todo adding feature in Header component
+2. Updated the button Complete All Tasks that will complete all our todo
+3. Updated the button Clear Completed Tasks that will remove all completed todo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# In this commit adding a extra action to toggle all the completed 
+1. We added a new action InComplete that will toggle all task to complete false and added this in header component
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
