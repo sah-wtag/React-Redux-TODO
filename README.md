@@ -1,16 +1,15 @@
-# React + Vite
+# This is a todo project 
+## Till now completed 
+1. We have introduced 2 main redux part here, Todos and Filter. We have added actions and reducers for them with initial state.
+2. We have setted up the redux store and provided the app component under this
+3. We have Todolist component which shows the Todo component with multiple workablity
+4. In Todo component we can Change Color(Red/Green/Yellow), Toggle status(Complete true/false), Delete the todo 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## We are doing
+1. Updated the Footer component
+2. Updated how many tasks left in footer dynamically with dynamic messages
+3. We have enbaled the All, Incomplete and Complete status buttons for filtering, we also enabled BOLD syntax for the chosed status
+4. In the footer, we have options to filter by 3 colors also, we have updated the footer component to select/unselect the colors and the colors shows when toggling/pressing (filtering is not implemented yet in Todolist component)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

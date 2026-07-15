@@ -4,7 +4,7 @@ import todoReducer from "./todos/reducer";
 
 const rootReducer = combineReducers({
   todos: todoReducer,
-  filers: filterReducer,
+  filters: filterReducer,
 });
 
 export default rootReducer;
