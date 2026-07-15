@@ -18,7 +18,7 @@ export default function () {
         ></button>
       </form>
 
-      <ul claclassNamess="flex justify-between my-4 text-xs text-gray-500">
+      <ul className="flex justify-between my-4 text-xs text-gray-500">
         <li className="flex space-x-1 cursor-pointer">
           <img className="w-4 h-4" src={tickImage} alt="Complete" />
           <span>Complete All Tasks</span>
