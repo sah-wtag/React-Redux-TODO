@@ -17,7 +17,6 @@ export default function Todo({ todo }) {
   const handleDelete = (todoId) => {
     dispatch(deleted(todoId));
   };
-  
   return (
     <div className="flex justify-start items-center p-2 hover:bg-gray-100 hover:transition-all space-x-4 border-b border-gray-400/20 last:border-0">
       <div
@@ -41,7 +40,9 @@ export default function Todo({ todo }) {
         )}
       </div>
 
-      <div className="select-none flex-1 line-through">{text}</div>
+      <div className={`select-none flex-1 ${completed && "line-through"}`}>
+        {text}
+      </div>
 
       <div
         className={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer hover:bg-green-500 border-green-500 ${
