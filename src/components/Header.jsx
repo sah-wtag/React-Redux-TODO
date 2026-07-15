@@ -22,6 +22,10 @@ export default function () {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    const trimmedInput = input.trim();
+
+    if (!trimmedInput) return;
+    
     dispatch(added(input));
     setInput("");
   };
