@@ -6,8 +6,10 @@ import {
   CLEARCOMPLETED,
   COLORSELECTED,
   DELETED,
+  LOADED,
   TOGGLED,
 } from "./actionTypes";
+import { act } from "react";
 
 const nextTodoId = (todos) => {
   const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);
@@ -25,6 +27,9 @@ const reducer = (state = initialState, action) => {
           completed: false,
         },
       ];
+
+    case LOADED:
+      return action.payload;
 
     case TOGGLED:
       return state.map((todo) => {
