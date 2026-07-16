@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import Todo from "./Todo";
 import { useEffect } from "react";
-import fetchTodos from "../redux/thunk/featchTodos";
+import fetchTodos from "../redux/todos/thunk/featchTodos";
 
 export default function TodoList() {
   const todos = useSelector((state) => state.todos);

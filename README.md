@@ -32,8 +32,12 @@
 
 1. We added a new action InComplete that will toggle all task to complete false and added this in header component
 
-# In this commit, we set up asynchronous data loading from server
+# We set up asynchronous data loading from server
 1. Created a LOADED action and add this in reducer
 2. Created a middleware thunk(fetchTodos) to fetch data from our server
 3. Removed the intial todos thus can fetch from server
 4. Called the fetchTodos middleware via dispatch to load the json asynchronously 
+
+# In this commit, Add todos in the local server
+1. We have created Add todo thunk to add our todo in the server with the added actions
+2. In the header we added the addTodo thunk in the new todo creation flow

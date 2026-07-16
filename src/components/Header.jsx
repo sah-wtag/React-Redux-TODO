@@ -6,11 +6,11 @@ import unTickImage from "../assets/images/incomplete.png";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
-  added,
   allCompleted,
   allInCompleted,
   clearCompleted,
 } from "../redux/todos/actions";
+import addTodo from "../redux/todos/thunk/addTodo";
 
 export default function () {
   const [input, setInput] = useState("");
@@ -26,7 +26,7 @@ export default function () {
 
     if (!trimmedInput) return;
     
-    dispatch(added(input));
+    dispatch(addTodo(input));
     setInput("");
   };
 
