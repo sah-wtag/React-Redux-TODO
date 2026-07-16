@@ -49,6 +49,14 @@
 1. Update Complete status with updateStatus thunk
 2. Update color with updateColor thunk
 
-# In this commit, we have enable deleting todo's
+# We have enable deleting todo's
 
 1. Delete todo's with deleteTodo thunk
+
+# In this commit, How to Setup the server
+
+1. `cd lws-json-server-todos`
+2. `npm install json-server`
+3. `npm start`
+
+We have package in `lws-json-server-todos` which is a json server and it will be a fake server running in 9000 port with values we set in the json file which will be a LIVE DATABASE kind of things with CRUD API setup. You can read the ddetails here `sumit-new-redux-react/lws-json-server-todos/README.md`
