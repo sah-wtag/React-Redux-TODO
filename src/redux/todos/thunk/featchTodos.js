@@ -1,9 +1,9 @@
 import { loaded } from "../actions";
+import BASE_URL from "../../../utils/apiConfig";
 
 const fetchTodos = async (dispatch) => {
-  const response = await fetch("http://localhost:9000/todos");
+  const response = await fetch(`${BASE_URL}/todos`);
   const todos = await response.json();
-  
   dispatch(loaded(todos));
 };
 

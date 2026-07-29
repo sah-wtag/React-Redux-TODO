@@ -1,10 +1,14 @@
 import { toggled } from "../actions";
+import BASE_URL from "../../../utils/apiConfig";
 
 const updateStatus = (todoId, currentStatus) => {
-  return async (dispatch) => {
-    const response = await fetch(`http://localhost:9000/todos/${todoId}`, {
-      method: "PATCH",
+  return async (dispatch, getState) => {
+    const currentTodo = getState().todos.find((t) => t.id === todoId);
+
+    const response = await fetch(`${BASE_URL}/todos/${todoId}`, {
+      method: "PUT",
       body: JSON.stringify({
+        ...currentTodo,
         completed: !currentStatus,
       }),
       headers: {

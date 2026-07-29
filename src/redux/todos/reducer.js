@@ -9,7 +9,6 @@ import {
   LOADED,
   TOGGLED,
 } from "./actionTypes";
-import { act } from "react";
 
 const nextTodoId = (todos) => {
   const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);

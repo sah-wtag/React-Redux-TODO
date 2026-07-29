@@ -1,8 +1,9 @@
 import { deleted } from "../actions";
+import BASE_URL from "../../../utils/apiConfig";
 
 const deleteTodo = (todoId) => {
   return async (dispatch) => {
-    await fetch(`http://localhost:9000/todos/${todoId}`, {
+    await fetch(`${BASE_URL}/todos/${todoId}`, {
       method: "DELETE",
     });
 
